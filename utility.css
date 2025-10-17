@@ -1,0 +1,19 @@
+.border{
+    /* margin: 4px; */
+    border-radius: 10px;
+}
+.flex{
+    display: flex;
+}
+.justify-center{
+    justify-content: center;
+}
+.items-center{
+    align-items: center;
+} 
+.invert{
+    filter: invert(1);
+}
+.hand:hover{
+    cursor: pointer;
+}

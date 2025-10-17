@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, sans-serif;
+    
+}
+body{
+    background-color: black;
+    color: white;
+}
+.nav{
+    margin: 8px 0 3px 0;
+}
+.nav div{
+    margin-right: 20px;
+}
+.nav .logo{
+    margin: 0.3% 1.5%;
+}
+.nav .home{
+    width: 50px;
+    height: 47px;
+    border: none;
+    border-radius: 25px;
+    background-color: #1f1f1f;
+}
+.nav .searchbox{
+    width: 35vw;
+    background-color: #1f1f1f;
+    border-radius: 17vw;
+}
+.nav .searchbox button{
+    border: none;
+    background-color: transparent;
+    margin: 0 8px;
+}
+.nav .searchbox input{
+    border: none;
+    font-size: 17px;
+    background-color: transparent;
+    color: #fff;
+    font-weight: medium;
+}
+.nav .searchbox section{
+    margin-left: 12vw;
+    align-self: center;
+}
+.nav .bigthree{
+    margin-left: 10vw;
+}
+.nav .bigthree button{
+    border: none;
+    background-color: transparent;
+    font-size: 17px;
+    font-weight: 600;
+    color: hsl(0deg 0% 54.12%);
+    margin-left: 0.6vw;
+    margin-top: 1.6vh;
+}
+.nav .navlast{
+    margin-left: 1vw;
+}
+.nav .navlast button{
+    background-color: transparent;
+    color: hsl(0deg 0% 54.12%);
+    border: none;
+    margin-top: 1.6vh;
+    margin-left: 0.5vw;
+    font-size: 15px;
+    font-weight: 600;
+}
+.nav .login{
+    width: 90px;
+    height: 45px;
+    border: none;
+    font-size: 15px;
+    font-weight: 800;
+    border-radius: 30px;
+    background-color: white;
+}
+.left{
+    width: 31vw;
+    background-color: hsl(0deg 0% 7.06%);
+    padding: 17px;
+    margin: 6px 3px 6px 6px;
+    position: relative;
+    min-height: 80vh;
+}
+.left .lib{
+    justify-content: space-between;
+}
+.left .footer{
+    position: absolute;
+    bottom: 0;
+    gap: 6px;
+}
+.left .footer a{
+    color: hsl(0deg 0% 54.12%);
+    font-size: 11px;
+    text-decoration: none;
+}
+.right{
+    width: 69vw;
+    margin: 6px 6px 6px 3px;
+    background-color: #121212;
+}
