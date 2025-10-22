@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Spotify - Web Player</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="utility.css" />
   </head>
   <body>
-    <div class="nav flex">
+    <div class="nav grid">
       <div class="logo hand">
         <img class="invert" src="svg/logos.svg" alt="logo" />
       </div>
@@ -18,27 +18,29 @@
         </button>
       </div>
       <div class="searchbox flex">
-        <button class="hand">
-          <img class="invert" width="25px" src="svg/search.svg" alt="search" />
-        </button>
-        <input type="text" placeholder="What do you want to play?" />
-        <section>
+        <div class="l flex">
+          <button class="hand">
+            <img class="invert" width="25px" src="svg/search.svg" alt="search"/>
+          </button>
+          <input type="text" placeholder="What do you want to play?" />
+        </div>
+        <div class="r">
           <button class="hand">
             <img class="invert" width="25px" src="svg/sdabba.svg" alt="sdabba"/>
           </button>
-        </section>
+        </div>
       </div>
       <div class="bigthree">
-        <button class="hand">Premium</button>
-        <button class="hand">Support</button>
-        <button class="hand">Download</button>
+        <button class="hand hov">Premium</button>
+        <button class="hand hov">Support</button>
+        <button class="hand hov">Download</button>
       </div>
       <div class="navlast">
-        <button class="hand">
-          <img class="invert" width="15px" src="svg/install.svg" alt="" />
+        <button class="hand hov">
+          <img class="invert hov" width="15px" src="svg/install.svg" alt="" />
           install app
         </button>
-        <button class="hand">sign up</button>
+        <button class="hand hov">sign up</button>
       </div>
       <div class="login"><button class="hand login">Log in</button></div>
     </div>
@@ -51,9 +53,18 @@
             <img class="invert hand" width="15px" src="svg/plus.svg" alt="" />
           </div>
         </div>
+        <div class="songlist">
+          <ul>
+           
+          </ul>
+        </div>
         <div class="footer flex">
           <div>
-            <a href="https://www.spotify.com/in-en/legal/" data-encore-id="textLink" id="">
+            <a
+              href="https://www.spotify.com/in-en/legal/"
+              data-encore-id="textLink"
+              id=""
+            >
               <span data-encore-id="type">Legal</span>
             </a>
           </div>
@@ -104,7 +115,45 @@
           </div>
         </div>
       </div>
-      <div class="right border"></div>
+      <div class="right border">
+        <div class="songs">
+          <h1>Spotify songs</h1>
+          <div class="cardcontainer">
+            <div class="card">
+              <div class="play">
+                <img width="17px" height="17px" src="svg/playbutton.png" alt="" />
+              </div>
+              <img src="photos/s1.jpeg" alt="" />
+              <h3>Tutor</h3>
+              <p>Cheema Y, Gur Sidhu</p>
+            </div>
+
+            <div class="card">
+              <div class="play">
+                <img width="17px" height="17px" src="svg/playbutton.png" alt=""/>
+              </div>
+              <img src="photos/s1.jpeg" alt="" />
+              <h3>Tutor</h3>
+              <p>Cheema Y, Gur Sidhu</p>
+            </div>
+          </div>
+
+          <div class="playbar">
+            <div class="seekbar">
+              <div class="circle"></div>
+            </div>
+            <div class="songinfo"></div>
+            <div class="songbuttons">
+              <img width="20px" src="svg/previous.svg" alt="">
+              <img width="25px" src="svg/play.svg" alt="">
+              <img width="20px" src="svg/next.svg" alt="">
+            </div>
+            <div class="songtime"> </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>

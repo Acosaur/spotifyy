@@ -2,6 +2,9 @@
     /* margin: 4px; */
     border-radius: 10px;
 }
+.grid{
+    display: grid;
+}
 .flex{
     display: flex;
 }
@@ -16,4 +19,25 @@
 }
 .hand:hover{
     cursor: pointer;
+}
+.nav .hov:hover{
+    color: white;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(0deg 0% 7.06%); /* Dark background */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #232323; /* Scroll handle */
+  border-radius: 10px;
+  border: 2px solid #111; /* Adds gap effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #3c3c3c; /* Lighter on hover */
 }

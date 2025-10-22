@@ -11,6 +11,8 @@ body{
 }
 .nav{
     margin: 8px 0 3px 0;
+    grid-template-columns: 4vw 4vw 50vw 20vw 14vw 4vw;
+    align-items: center;
 }
 .nav div{
     margin-right: 20px;
@@ -27,27 +29,33 @@ body{
 }
 .nav .searchbox{
     width: 35vw;
+    height:7vh;
     background-color: #1f1f1f;
     border-radius: 17vw;
+    justify-content: space-between;
 }
-.nav .searchbox button{
+.nav .searchbox .l button{
     border: none;
     background-color: transparent;
     margin: 0 8px;
 }
-.nav .searchbox input{
+.nav .searchbox .l input{
     border: none;
     font-size: 17px;
     background-color: transparent;
     color: #fff;
     font-weight: medium;
 }
-.nav .searchbox section{
-    margin-left: 12vw;
+.nav .searchbox .r{
     align-self: center;
 }
+.nav .searchbox .r button{
+    background-color: transparent;
+    border: none;
+}
 .nav .bigthree{
-    margin-left: 10vw;
+    display: flex;
+    gap: 0.7vw;
 }
 .nav .bigthree button{
     border: none;
@@ -55,18 +63,15 @@ body{
     font-size: 17px;
     font-weight: 600;
     color: hsl(0deg 0% 54.12%);
-    margin-left: 0.6vw;
-    margin-top: 1.6vh;
 }
 .nav .navlast{
-    margin-left: 1vw;
+    display: flex;
+    gap: 1.5vw;
 }
 .nav .navlast button{
     background-color: transparent;
     color: hsl(0deg 0% 54.12%);
     border: none;
-    margin-top: 1.6vh;
-    margin-left: 0.5vw;
     font-size: 15px;
     font-weight: 600;
 }
@@ -76,23 +81,33 @@ body{
     border: none;
     font-size: 15px;
     font-weight: 800;
-    border-radius: 30px;
+    border-radius: 60px;
     background-color: white;
 }
+.login:hover{
+    background-color: #c7c7c7;
+    width: 91px;
+    height: 46px;
+}
+
+
 .left{
     width: 31vw;
     background-color: hsl(0deg 0% 7.06%);
-    padding: 17px;
+    padding: 20px;
     margin: 6px 3px 6px 6px;
     position: relative;
-    min-height: 80vh;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 .left .lib{
     justify-content: space-between;
 }
 .left .footer{
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     gap: 6px;
 }
 .left .footer a{
@@ -100,8 +115,124 @@ body{
     font-size: 11px;
     text-decoration: none;
 }
+.songlist{
+    height: 66vh;
+    overflow: scroll;
+}
+.songlist ul{
+    padding: 0 5px;
+}
+.songlist ul li{
+    /* display: flex;
+    justify-content: space-between; */
+    display: grid;
+    grid-template-columns: 1fr 16fr 6fr;
+    gap: 15px;
+    padding: 12px 0;
+    border: 1px solid white;
+    margin: 12px 0;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.playnow{
+    font-size: 13px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
 .right{
     width: 69vw;
     margin: 6px 6px 6px 3px;
     background-color: #121212;
+    padding: 30px;
+    position: relative;
+    
+}
+.cardcontainer{
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6vw;
+    max-height: 65vh;
+    overflow-y: scroll;
+}
+.card{
+    width: 14vw;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #1f1f1f;
+    position: relative;
+}
+.card > *{
+    padding-top: 6px;
+}
+.card p{
+    font-size: 13px;
+}
+.card img{
+    width: 100%;
+    object-fit: contain;
+}
+.play{
+    width: 45px;
+    height: 42px;
+    background-color: #1ed760;
+    border-radius: 70px;
+    position: absolute;
+    top: 140px;
+    right: 20px;
+    animation: playbutton 0.3s ease-out;
+}
+@keyframes playbutton{
+    from{
+        top: 155px;
+        opacity: 0;
+    }
+    to{
+        top: 140px;
+        opacity: 1;
+    }
+}
+.play img{
+    margin-top: 6px;
+    margin-left: 2px;
+}
+
+.playbar{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #1ed760;
+    border-radius: 10px;
+    left: 0;
+    padding: 10px;
+}
+.songbuttons{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.seekbar{
+    height: 5px;
+    left: 0;
+    width: 100%;
+    background: black;
+    border-radius: 10px;
+    position:absolute;
+    bottom: 0;
+    margin: 1px;
+}
+.circle{
+    position: relative;
+    height: 10px;
+    width: 10px;
+    border-radius: 10px;
+    background-color: yellow;
+    bottom: 3px;
+    left: 0%;
+    transition: left 0.5s;
 }
