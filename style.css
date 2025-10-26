@@ -186,7 +186,7 @@ body{
     padding-top: 30px;
     display: flex;
     flex-wrap: wrap;
-    gap: 1.6vw;
+    gap: 1.4vw;
     max-height: 65vh;
     overflow-y: scroll;
 }
