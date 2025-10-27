@@ -71,7 +71,7 @@ const playMusic = (track, pause=false)=> {
 }
 
 async function displayAlbums(){
-    let a =await fetch(`/spotifyy/songs/`);
+    let a =await fetch(`/songs/`);
     let response= await a.text();
     let div= document.createElement("div")
     div.innerHTML=response
@@ -82,7 +82,7 @@ async function displayAlbums(){
         const e = array[index];
         if(e.href.includes("%5Csongs%5C") && !e.href.includes(".htaccess")){
             let folder= e.href.split("%5C").slice(-2)[1]
-            let a =await fetch(`/spotifyy/songs/${folder}/info.json`)
+            let a =await fetch(`/songs/${folder}/info.json`)
             let response= await a.json()
             cardcontainer.innerHTML= cardcontainer.innerHTML + `<div data-folder="${folder}" class="card">
               <div class="play">
